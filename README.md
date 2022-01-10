@@ -3,3 +3,11 @@
 ## This is supply chain for Banana
 
 I chose banana for the development of the supply chain with Solidity on the Ethereum network, as I am Brazilian and this fruit belongs to the tropical zone, in addition to personally I like banana.
+
+## Diagrams
+
+### Acivity Diagram
+
+>Activity diagrams are graphical representations of workflows of stepwise activities and actions with support for choice, iteration and concurrency.
+
+![Activity Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Facitivity_diagram.png?alt=media&token=ae03cce3-5200-4258-9100-7adf8399927a)
