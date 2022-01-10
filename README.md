@@ -4,7 +4,9 @@
 
 I chose banana for the development of the supply chain with Solidity on the Ethereum network, as I am Brazilian and this fruit belongs to the tropical zone, in addition to personally I like banana.
 
-## Diagrams
+## UML Diagram
+
+UML is a way of visualizing a software program using a collection of diagrams.
 
 ### Acivity Diagram
 
