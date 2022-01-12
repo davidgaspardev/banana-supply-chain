@@ -12,19 +12,19 @@ UML is a way of visualizing a software program using a collection of diagrams.
 
 >Activity diagrams are graphical representations of workflows of stepwise activities and actions with support for choice, iteration and concurrency.
 
-![Activity Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Facitivity_diagram.png?alt=media&token=5b09f0cb-cf66-411e-b1f5-49bdfce0fb7c)
+![Activity Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Factivity_diagram.png?alt=media&token=968e4837-d3f2-46c5-9f76-76a56c608550)
 
 ### Sequencial Diagram
 
-![Sequencial Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fsequencial_diagram.png?alt=media&token=f82661a9-9a8d-4592-9373-3cd30912e57d)
+![Sequencial Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fsequencial_diagram.png?alt=media&token=0b44dd81-5f82-475c-8c1c-c236f623e802)
 
 ### State Diagram
 
-![State Diagram:Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fstate_diagram.png?alt=media&token=c3ddfcbf-eb42-4746-be01-d5a7a2559422)
+![State Diagram:Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fstate_diagram.png?alt=media&token=b7ab65e6-c3a9-4900-b58e-479be6b12d26)
 
 ### Class Diagram
 
-![Class Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fclass_diagram.png?alt=media&token=168c538a-2c11-4cc1-81f2-7390dfe91e4b)
+![Class Diagram: Banana Supply Chain](https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fclass_diagram.png?alt=media&token=f850d450-a78e-4a95-b253-1be1408edbed)
 
 ## Enviroment
 
