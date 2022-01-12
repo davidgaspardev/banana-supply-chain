@@ -1,8 +1,13 @@
-const ConvertLib = artifacts.require("ConvertLib");
-const MetaCoin = artifacts.require("MetaCoin");
+const FarmerRole = artifacts.require("./FarmerRole.sol");
+const DistributorRole = artifacts.require("./DistributorRole.sol");
+const RetailerRole = artifacts.require("./RetailerRole.sol");
+const ConsumerRole = artifacts.require("./ConsumerRole.sol");
+const BananaSupplyChain = artifacts.require("./BananaSupplyChain.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.deploy(FarmerRole);
+  deployer.deploy(DistributorRole);
+  deployer.deploy(RetailerRole);
+  deployer.deploy(ConsumerRole);
+  deployer.deploy(BananaSupplyChain);
 };
