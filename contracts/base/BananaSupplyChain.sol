@@ -101,6 +101,12 @@ contract BananaSupplyChain is
     uint amountToReturn = msg.value - _price;
     address2payable(bananas[_upc].consumerID).transfer(amountToReturn);
   }
+  modifier checkValueDistributor(uint _upc) {
+    _;
+    uint _price = bananas[_upc].productPrice;
+    uint amountToReturn = msg.value - _price;
+    address2payable(bananas[_upc].distributorID).transfer(amountToReturn);
+  }
 
   modifier harvested(uint _upc) {
     require(bananas[_upc].state == BananaState.Harvested);
@@ -161,11 +167,11 @@ contract BananaSupplyChain is
   }
 
   // Define a function 'kill' if required
-  // function kill() public onlyOwner {
-  //   if (msg.sender == owner()) {
-  //     selfdestruct(owner());
-  //   }
-  // }
+  function kill() public onlyOwner {
+    if (msg.sender == owner()) {
+      selfdestruct(owner());
+    }
+  }
 
   function address2payable(address addr) private pure returns (address payable) {
     return address(uint160(addr));
@@ -186,7 +192,7 @@ contract BananaSupplyChain is
     bananas[_upc].sku = sku;
     bananas[_upc].upc = _upc;
     bananas[_upc].ownerID = msg.sender;
-    bananas[_upc].originFarmerID = address2payable(_originFarmerID);
+    bananas[_upc].originFarmerID = _originFarmerID;
     bananas[_upc].originFarmName = _originFarmName;
     bananas[_upc].originFarmInformation = _originFarmInformation;
     bananas[_upc].originFarmLatitude = _originFarmLatitude;
@@ -241,7 +247,7 @@ contract BananaSupplyChain is
     payable 
     boxForSale(_upc)
     paidEnough(bananas[_upc].productPrice)
-    checkValue(_upc)    
+    checkValueDistributor(_upc)
   {
     // Update the appropriate fields - ownerID, distributorID, itemState
     bananas[_upc].ownerID = msg.sender;
