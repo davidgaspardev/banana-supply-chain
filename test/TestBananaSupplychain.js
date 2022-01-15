@@ -33,6 +33,8 @@ contract('BananaSupplyChain', function(accounts) {
     it("Testing smart contract function harvestBanana() that allows a farmer to harvest banana", async() => {
         const supplyChain = await SupplyChain.deployed()
 
+        await supplyChain.addFarmer(originFarmerID);
+
         // Mark an item as Harvested by calling function harvestItem()
         const event = await supplyChain.harvestBanana(
             upc,
@@ -109,6 +111,8 @@ contract('BananaSupplyChain', function(accounts) {
     // 4th Test
     it("Testing smart contract function sellBananaBox() that allows a farmer to sell banana box", async() => {
         const supplyChain = await SupplyChain.deployed()
+
+        console.log("productPrice:", productPrice);
         
         const event = await supplyChain.sellBananaBox(upc, productPrice, { from: originFarmerID });
         
@@ -131,8 +135,8 @@ contract('BananaSupplyChain', function(accounts) {
     // 5th Test
     it("Testing smart contract function buyBananaBox() that allows a distributor to buy banana box", async() => {
         const supplyChain = await SupplyChain.deployed()
-        
-        const event = await supplyChain.buyBananaBox.call(upc, { from: distributorID });
+        await supplyChain.addDistributor(distributorID);
+        const event = await supplyChain.buyBananaBox(upc, { from: distributorID, value: productPrice });
 
         const resultBufferOne = await supplyChain.fetchBananaBufferOne.call(upc);
         const resultBufferTwo = await supplyChain.fetchBananaBufferTwo.call(upc);
@@ -140,13 +144,13 @@ contract('BananaSupplyChain', function(accounts) {
         // Verify the result set
         assert.equal(resultBufferOne[0], sku, 'Error: Invalid item SKU');
         assert.equal(resultBufferOne[1], upc, 'Error: Invalid item UPC');
-        assert.equal(resultBufferOne[2], ownerID, 'Error: Missing or Invalid ownerID');
+        assert.equal(resultBufferOne[2], distributorID, 'Error: Missing or Invalid ownerID');
         assert.equal(resultBufferOne[3], originFarmerID, 'Error: Missing or Invalid originFarmerID');
         assert.equal(resultBufferOne[4], originFarmName, 'Error: Missing or Invalid originFarmName');
         assert.equal(resultBufferOne[5], originFarmInformation, 'Error: Missing or Invalid originFarmInformation');
         assert.equal(resultBufferOne[6], originFarmLatitude, 'Error: Missing or Invalid originFarmLatitude');
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude');
-        assert.equal(resultBufferTwo[5], 3, 'Error: Invalid State');
+        assert.equal(resultBufferTwo[5], 4, 'Error: Invalid State');
         truffleAssert.eventEmitted(event, 'Sold');        
     });
 
