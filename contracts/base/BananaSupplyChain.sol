@@ -282,7 +282,8 @@ contract BananaSupplyChain is
   }
 
   function purchaseBanana(uint _upc)
-    public 
+    public
+    payable
     onlyConsumer
     forSale(_upc)
     paidEnough(bananas[_upc].productPrice)
@@ -297,8 +298,7 @@ contract BananaSupplyChain is
   }
 
   // Define a function 'fetchItemBufferOne' that fetches the data
-  function fetchBananaBufferOne(uint _upc) public view returns 
-  (
+  function fetchBananaBufferOne(uint _upc) public view returns (
     uint    bananaSKU,
     uint    bananaUPC,
     address ownerID,
@@ -333,8 +333,7 @@ contract BananaSupplyChain is
   }
 
   // Define a function 'fetchItemBufferTwo' that fetches the data
-  function fetchBananaBufferTwo(uint _upc) public view returns 
-  (
+  function fetchBananaBufferTwo(uint _upc) public view returns (
     uint    bananaSKU,
     uint    bananaUPC,
     uint    productID,
