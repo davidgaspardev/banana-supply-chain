@@ -99,6 +99,6 @@ ___
 
 ___
 
-## Fron-end: Banana Terminal Daap 
+## Fron-end: Banana Terminal Daap
 
-<video width="100%" src="https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fbsc.mp4?alt=media&token=162d74e1-fa30-4720-8c31-5400b59d470a"/>
+https://firebasestorage.googleapis.com/v0/b/myself-dg.appspot.com/o/nanodegree%2Fblockchain%2Fbanana-supply-chain%2Fbsc.mp4?alt=media&token=162d74e1-fa30-4720-8c31-5400b59d470a
