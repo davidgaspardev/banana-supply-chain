@@ -1,9 +1,37 @@
-body {
-    background-color:#fff;
-    padding: 2em;
-    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-    color: #212121;
-  }
+html,
+body,
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+div#display {
+  height: 350px;
+  overflow-x: scroll;
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+div.events {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+div.events > form {
+  margin: 8px;
+  padding: 8px;
+  width: 300px;
+  min-height: 100px;
+  background-color: #F8F8F8;
+  border-radius: 5px;
+}
+
   .container {
     width: 80%;
     margin: 0 auto;

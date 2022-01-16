@@ -8,7 +8,7 @@ import "../accesscontrol/FarmerRole.sol";
 import "../accesscontrol/RetailerRole.sol";
 
 // Define a contract 'Supplychain'
-contract BananaSupplyChain is 
+contract SupplyChain is 
     Ownable,
     ConsumerRole,
     DistributorRole,
@@ -163,7 +163,6 @@ contract BananaSupplyChain is
     string memory _originFarmInformation,
     string memory _originFarmLatitude,
     string memory  _originFarmLongitude,
-    uint _productID,
     string memory _productNotes
   )
     public
@@ -177,7 +176,7 @@ contract BananaSupplyChain is
     bananas[_upc].originFarmInformation = _originFarmInformation;
     bananas[_upc].originFarmLatitude = _originFarmLatitude;
     bananas[_upc].originFarmLongitude = _originFarmLongitude;
-    bananas[_upc].productID = _productID;
+    bananas[_upc].productID = sku + upc;
     bananas[_upc].productNotes = _productNotes;
     
     sku = sku + 1;

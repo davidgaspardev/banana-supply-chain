@@ -10,99 +10,72 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 style="text-align: center;">Fair Trade Coffee</h1>
-        <hr>
-        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
-    </div>
-    <div id="ftc-harvest">
-        <h2>Product Overview</h2>
-        <div class="form-group">
-            SKU
-            <br>
-            <input class="input-field" type="number" id="sku" name="sku" value=1><br>
-            UPC
-            <br>
-            <input type="number" id="upc" name="upc" value=1><br>
-            Current Owner ID
-            <br>
-            <input type="text" id="ownerID" name="ownerID" value="0x963865f57804b38459dd4b2da2f760211a200438"
-                size="50"><br>
-            <div class=button-div>
-                <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
-                <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
-            </div>
-        </div>
-        <div class=form-break></div>
-        <h2>Farm Details</h2>
-        <div class="form-group">
-            Farmer ID
-            <br>
-            <input type="text" id="originFarmerID" name="originFarmerID"
-                value="0x99c289eb2aacec289631a5ddf62cf27a63d4494f" size="50"><br>
-            Farm Name
-            <br>
-            <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br>
-            Farm Information
-            <br>
-            <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br>
-            Farm Latitude
-            <br>
-            <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br>
-            Farm Longitude
-            <br>
-            <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
-            <br>
-            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
-            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
-            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
-            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
-        </div>
-        <div class=form-break></div>
-        <h2>Product Details</h2>
-        <div class="form-group">
-            Product Notes
-            <br>
-            <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso" size="60"><br>
-            Product Price
-            <br>
-            <input type="number" id="productPrice" name="productPrice" value=1>ETH<br>
-            Distributor ID
-            <br>
-            <input type="text" id="distributorID" name="distributorID"
-                value="0xf1b1bcd24dad92303dd9fe78be639f7bcf9c238d" size="50">
-            <br>
-            Retailer ID
-            <br>
-            <input type="text" id="retailerID" name="retailerID" value="0x0fb2bfefd526966c87efa19f6693d50971763fc2"
-                size="50"><br>
-            Distributor ID
-            <br>
-            <input type="text" id="consumerID" name="consumerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4"
-                size="50"><br>
-            <br>
-            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
-            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
-            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
-            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
-        </div>
-        <div class=form-break></div>
-        <hr>
+    <h1>Banana Terminal Dapp</h1>
+    <div id="display">
+
     </div>
 
-    <h2>Transaction History<span id="ftc-history"></span></h2>
-    <div>
-        <ul id="ftc-events">
-            <!-- Events will appear here from app.js -->
-        </ul>
-        <br>
-        <hr>
+    <div class="events">
+        <form id="form-farmer">
+            <h3>Farmer</h3>
+            <input type="number" name="upc" placeholder="UPC"/>
+            <input type="text" name="originFarmerID" placeholder="Origin farmer ID"/>
+            <input type="text" name="originFarmerName" placeholder="Origin farmer name"/>
+            <input type="text" name="originFarmerInfo" placeholder="Origin farmer information"/>
+            <input type="text" name="originFarmerLatitude" placeholder="Origin farmer latitude"/>
+            <input type="text" name="originFarmerLongitude" placeholder="Origin farmer longitude"/>
+            <!-- <input type="number" name="productID" placeholder="Product ID"/> -->
+            <input type="text" name="productNotes" placeholder="Product notes"/>
+            <div>
+                <input id="harvestBanana" type="submit" value="Harvest" />
+                <input id="processBanana" type="submit" value="Process" />
+                <input id="boxBanana" type="submit" value="Boxed" />
+                <input type="number" name="productPrice" placeholder="Product price"/>
+                <input id="sellBananaBox" type="submit" value="Box for sale" />
+            </div>
+        </form>
+
+        <form id="form-distributor">
+            <h3>Distributor</h3>
+            <input type="number" name="upc" placeholder="UPC"/>
+            <div>
+                <input id="buyBananaBox" type="submit" value="Buy box" />
+                <input id="shipBananaBox" type="submit" value="Ship box" />
+            </div>
+        </form>
+
+        <form id="form-retailer">
+            <h3>Retailer</h3>
+            <input type="number" name="upc" placeholder="UPC"/>
+            <div>
+                <input id="receiveBananaBox" type="submit" value="Receive box" />
+                <input id="unboxBanana" type="submit" value="Unbox" />
+                <input id="sellBanana" type="submit" value="For sale" />
+            </div>
+        </form>
+
+        <form id="form-consumer">
+            <h3>Consumer</h3>
+            <input type="number" name="upc" placeholder="UPC"/>
+            <div>
+                <input id="purchaseBanana" type="submit" value="Purchase" />
+            </div>
+        </form>
+
+        <form id="form-anyone">
+            <h3>Anyone</h3>
+            <input type="number" name="upc" placeholder="UPC"/>
+            <div>
+                <input id="fetchBanana" type="submit" value="Purchase" />
+            </div>
+        </form>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="js/web3.min.js"></script> -->
-    <script src="js/truffle-contract.js"></script>
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="node_modules/web3/dist/web3.min.js"></script>
+    <!-- <script src="src/js/truffle-contract.js"></script> -->
+    <!-- <script src="src/js/app.js"></script> -->
+    <script type="text/javascript" src="src/js/new_app.js"></script>
 </body>
 
 </html>

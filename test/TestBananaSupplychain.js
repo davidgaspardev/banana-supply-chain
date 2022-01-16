@@ -1,6 +1,6 @@
-// This script is designed to test the solidity smart contract - BananaSuppyChain.sol -- and the various functions within
+// This script is designed to test the solidity smart contract - SuppyChain.sol -- and the various functions within
 // Declare a variable and assign the compiled smart contract artifact
-var SupplyChain = artifacts.require('BananaSupplyChain');
+var SupplyChain = artifacts.require('SupplyChain');
 const truffleAssert = require('truffle-assertions');
 
 contract('BananaSupplyChain', function(accounts) {
@@ -15,8 +15,8 @@ contract('BananaSupplyChain', function(accounts) {
     const farmerLatitude = "-38.239770";
     const farmerLongitude = "144.341490";
 
-    var productId = sku + upc;
-    const productNotes = "Best beans for Espresso";
+    const productId = sku + upc;
+    const productNotes = "Best banana";
     const productPrice = web3.utils.toWei("1", "ether");
     const productFee = web3.utils.toWei("0.5", "ether");
 
@@ -81,7 +81,7 @@ contract('BananaSupplyChain', function(accounts) {
             farmerInformation,
             farmerLatitude,
             farmerLongitude,
-            productId,
+            // productId,
             productNotes
         );
 
